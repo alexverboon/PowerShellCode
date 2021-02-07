@@ -4,7 +4,7 @@
 .GUID c1b0b9d0-5fc1-494c-b746-46d8d4543b48
 .AUTHOR Alex Verboon
 .TAGS AzureAD, Identity, Authentication, MFA
-.PROJECTURI ""
+.PROJECTURI "https://github.com/alexverboon/PowerShellCode/tree/main/AzureAD/MFA/MfaAuthMethodsAnalysisV2"
 .DESCRIPTION This script retrieves AzureAD User Authentication Method information
 .SYNOPSIS This script retrieves AzureAD User Authentication method information. 
 .EXAMPLE

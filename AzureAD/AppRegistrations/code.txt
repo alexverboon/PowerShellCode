@@ -1,0 +1,33 @@
+[int]$AppCredentialsExpiringThreshold = 360
+$Result = [System.Collections.ArrayList]::new()
+$AppRegs = Get-AzADApplication
+ForEach($app in $AppRegs){
+    $AppCredentials = @(Get-AzADAppCredential -ObjectID "$($App.Objectid)")
+    $AppCredentialsExpiredCount=0
+    $AppCredentialsExpiring=0
+    ForEach($cred in $AppCredentials){
+        $expdays = (New-TimeSpan -Start (Get-Date) -End $cred.EndDate).Days
+        If($expdays -lt 0){
+            $AppCredentialsExpiredCount++
+        }
+        ElseIf($expdays -lt $AppCredentialsExpiringThreshold){
+            $AppCredentialsExpiring++
+        }
+    }
+    $object = [PSCustomObject]@{
+        DisplayName = $app.DisplayName
+        ObjectId = $app.Objectid
+        ApplicationId = $app.ApplicationId
+        AvailableToOtherTenants = $app.AvailableToOtherTenants
+        AppPermissions = $app.AppPermissions
+        ReplyUrls = $app.ReplyUrls
+        ObjectType = $app.ObjectType
+        IdentifierUris = $app.IdentifierUris
+        HomePage = $app.HomePage
+        AppCredentials = $AppCredentials
+        AppCredentialsCount = $AppCredentials.Count
+        AppCredentialsExpiredCount = $AppCredentialsExpiredCount
+        AppCredentilsExpiring = $AppCredentialsExpiring
+    }
+     [void]$Result.Add($object)
+}

@@ -23,7 +23,7 @@ if ($null -eq $(Get-MgContext)) {
 
 Try{
     Select-MgProfile -Name Beta 
-    $AllUsers = Get-mguser
+    $AllUsers = Get-mguser -all
     $AuthInfo = [System.Collections.ArrayList]::new()
     ForEach ($user in $allUsers){
         $UserAuthMethod = $null

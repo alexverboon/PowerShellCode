@@ -1,6 +1,6 @@
 # Defender for Endpoint - Onboarding Remediation
 
-For more details see: 
+For more details see: [How to remediate Defender for Endpoint onboarding with ConfigMgr](https://www.verboon.info/2021/02/how-to-remediate-defender-for-endpoint-onboarding-with-configmgr/)
 
 **Convert-MDEOnboardingBase64.ps1**
 This is the helper script to convert the onbaordingscript.cmd into a base64 string

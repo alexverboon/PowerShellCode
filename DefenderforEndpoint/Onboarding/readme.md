@@ -16,6 +16,6 @@ CI Scripts\CI_DefenderOnboarding_Discovery.ps1
 **CI Scripts\CI_DefenderOnboarding_Discovery.ps1**
 This script contains the code to gather the MDE onboarding state information
 
-**CI_DefenderOnboarding_Remediation.ps1**
+**CI Scripts\CI_DefenderOnboarding_Remediation.ps1**
 This script executes the MDE onboarding script when the discovery result is false
 

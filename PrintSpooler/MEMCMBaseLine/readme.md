@@ -1,4 +1,6 @@
-# Microsoft Endpoint Configuration Manager - Compliance Baseline for Print Spooler
+# Microsoft Endpoint Configuration Manager - Configuration Baseline for Print Spooler
+
+Use the below scripts to create a CI for the Print Spooler Service.
 
 ## Content
 

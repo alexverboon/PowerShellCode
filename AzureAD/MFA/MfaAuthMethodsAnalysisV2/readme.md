@@ -7,7 +7,6 @@ This script uses Microsoft Graph PowerShell modules
 ```powershell
 find-module -name "Microsoft.graph" | Install-module -Scope CurrentUser
 find-module -name "Microsoft.Graph.Identity.SignIns" | Install-module -Scope CurrentUser
-#find-module -name "Microsoft.Graph.Identity.AuthenticationMethods" | install-module -Scope CurrentUser 
 ```
 
 ## Connect to Graph
@@ -41,11 +40,11 @@ fido2                  : No
 Password               : Yes
 passwordless           : No
 
-userPrincipalName      : sam.lee@contoso.com
+userPrincipalName      : john.doe@contoso.com
 UserType               : Member
 AccountEnabled         : True
 id                     : f481026c-43f5-4c39-9b16-af50faf79c61
-DisplayName            : Sam Lee
+DisplayName            : John Doe
 AuthMethods            : {Microsoft.Graph.PowerShell.Models.MicrosoftGraphAuthenticationMethod,
                          Microsoft.Graph.PowerShell.Models.MicrosoftGraphAuthenticationMethod,
                          Microsoft.Graph.PowerShell.Models.MicrosoftGraphAuthenticationMethod}

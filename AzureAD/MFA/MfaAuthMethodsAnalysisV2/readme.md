@@ -6,7 +6,8 @@ This script uses Microsoft Graph PowerShell modules
 
 ```powershell
 find-module -name "Microsoft.graph" | Install-module -Scope CurrentUser
-find-module -name Microsoft.Graph.Identity.AuthenticationMethods | install-module -Scope CurrentUser 
+find-module -name "Microsoft.Graph.Identity.SignIns" | Install-module -Scope CurrentUser
+#find-module -name "Microsoft.Graph.Identity.AuthenticationMethods" | install-module -Scope CurrentUser 
 ```
 
 ## Connect to Graph

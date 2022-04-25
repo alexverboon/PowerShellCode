@@ -13,9 +13,9 @@
 .NOTES
     Author:           Alex Verboon
     Creation Date:    07.02.2021
+    Update:           25.04.2022, Updated to work with required modules, adjusted code to reflect graph changes in MgUserAuthenticationMethod return object
 #>
-##Requires -Module @{ ModuleName = 'Microsoft.Graph.Users'; RequiredVersion = '1.3.1'} ,@{ ModuleName = 'Microsoft.Graph.Identity.AuthenticationMethods'; RequiredVersion = '0.9.1'} 
-
+#Requires -Modules Microsoft.Graph.Users, Microsoft.Graph.Identity.SignIns
 
 if ($null -eq $(Get-MgContext)) {
        Throw "Authentication needed, call 'Connect-Graph -Scopes @(`"UserAuthenticationMethod.Read.All`",`"User.Read.All`")'."
@@ -36,13 +36,13 @@ Try{
                 DisplayName            = $user.Displayname
                 AuthMethods            = $UserAuthMethod
                 AuthMethodsCount       = ($UserAuthMethod).count
-                Phone                  = If ($UserAuthMethod.values -match "#microsoft.graph.phoneAuthenticationMethod") {"Yes"} Else{"No"}
-                MicrosoftAuthenticator = If ($UserAuthMethod.values -match "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod") {"Yes"} Else{"No"}
-                Email                  = If ($UserAuthMethod.values -match "#microsoft.graph.emailAuthenticationMethod") {"Yes"} Else{"No"}
-                HelloForBusiness       = If ($UserAuthMethod.values -match "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod") {"Yes"} Else{"No"}
-                fido2                  = If ($UserAuthMethod.values -match "#microsoft.graph.fido2AuthenticationMethod") {"Yes"} Else{"No"}
-                Password               = If ($UserAuthMethod.values -match "#microsoft.graph.passwordAuthenticationMethod") {"Yes"} Else{"No"}
-                passwordless           = If ($UserAuthMethod.values -match "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod") {"Yes"} Else{"No"}
+                Phone                  = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.phoneAuthenticationMethod") {"Yes"} Else{"No"}
+                MicrosoftAuthenticator = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod") {"Yes"} Else{"No"}
+                Email                  = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.emailAuthenticationMethod") {"Yes"} Else{"No"}
+                HelloForBusiness       = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod") {"Yes"} Else{"No"}
+                fido2                  = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.fido2AuthenticationMethod") {"Yes"} Else{"No"}
+                Password               = If ($UserAuthMethod.additionalproperties.values  -match "#microsoft.graph.passwordAuthenticationMethod") {"Yes"} Else{"No"}
+                passwordless           = If ($UserAuthMethod.additionalproperties.values -match "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod") {"Yes"} Else{"No"}
             }
         [void]$AuthInfo.Add($object)
     }

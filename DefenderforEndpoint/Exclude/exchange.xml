@@ -1,0 +1,93 @@
+<SecurityPolicy Name="Exchange" Description="" CreatedBy="amport\administrator" LastModifiedBy="amport\administrator" xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData">
+  <PolicySection Name="FEP.AmPolicy" Disabled="false">
+    <LocalGroupPolicySettings>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Paths" Disabled="false">
+        <AddValue Name="%SystemRoot%\Cluster" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemDrive%\DAGFileShareWitnesses\%DAGFQDN%" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%ClientAccess\OAB" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%GroupMetrics" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%Logging" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%Mailbox" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Data\Adam" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Data\IpFilter" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Data\Queue" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Data\SenderReputation" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Logs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Pickup" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%TransportRoles\Replay" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%UnifiedMessaging\Grammars" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%UnifiedMessaging\Prompts" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%UnifiedMessaging\Temp" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%UnifiedMessaging\Voicemail" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ExchangeInstallPath%Working\OleConverter" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemRoot%\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemRoot%\System32\Inetsrv" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemRoot%\Temp\OICE_*" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Extensions" Disabled="false">
+        <AddValue Name=".config" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".jfm" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".que" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".dsc" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".cfg" Type="REG_SZ" Disabled="false">0</AddValue>
+		<AddValue Name=".txt" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".grxml" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name=".lzx" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Processes" Disabled="false">
+        <AddValue Name="ComplianceAuditService.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Dsamain.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="EdgeTransport.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="fms.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="hostcontrollerservice.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="inetinfo.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.AntispamUpdateSvc.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.ContentFilter.Wrapper.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Diagnostics.Service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Directory.TopologyService.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.EdgeCredentialSvc.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.EdgeSyncSvc.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Imap4.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Imap4service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Notifications.Broker.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Pop3.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Pop3service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.ProtectedServiceHost.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.RPCClientAccess.Service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Search.Service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Servicehost.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Store.Service.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.Store.Worker.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Microsoft.Exchange.UM.CallRouter.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeCompliance.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeDagMgmt.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeDelivery.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeFrontendTransport.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeHMHost.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeHMWorker.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeMailboxAssistants.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeMailboxReplication.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeRepl.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeSubmission.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeTransport.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeTransportLogSearch.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="MSExchangeThrottling.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="Noderunner.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="OleConverter.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="ParserServer.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="ScanEngineTest.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="ScanningProcess.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="UmService.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="UmWorkerProcess.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="UpdateService.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="W3wp.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="wsbexchange.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+    </LocalGroupPolicySettings>
+  </PolicySection>
+</SecurityPolicy>
